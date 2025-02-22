@@ -1,5 +1,5 @@
 {
-  "name": "my-project",
+  "name": "cv",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,8 @@
     "watch:css": "npm run build:css && chokidar 'src/**/*.scss' -c 'npm run build:css'",
     "watch": "npm run build && npm-run-all --parallel watch:html watch:css",
     "serve": "browser-sync start --server 'dist' --files 'dist/**/*.html, dist/**/*.css' --ignore 'dist/**/*.map'",
-    "watch-and-serve": "npm-run-all --parallel watch serve"
+    "watch-and-serve": "npm-run-all --parallel watch serve",
+    "release": "rm -rf release && mkdir -p release && npm run build && cp -r dist/* release/ && echo $(date '+%Y-%m-%d %H:%M:%S') > release/changelog.txt"
   },
   "author": "velomenon@gmail.com",
   "license": "ISC",
