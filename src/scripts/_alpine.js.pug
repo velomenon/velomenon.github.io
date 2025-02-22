@@ -14,17 +14,7 @@ script.
                 let mins = now.getMinutes() - startDate.getMinutes();
                 let secs = now.getSeconds() - startDate.getSeconds();
 
-                // Adjust for negative values (e.g., if the current month is earlier than the start month)
-                if (secs < 0) {
-                    secs += 60;
-                    mins -= 1;
-                }
-                if (mins < 0) {
-                    mins += 60;
-                    hours -= 1;
-                }
                 if (hours < 0) {
-                    hours += 24;
                     days -= 1;
                 }
                 if (days < 0) {
@@ -37,7 +27,7 @@ script.
                     years -= 1;
                 }
 
-                this.timePassed = `${years} years, ${months} months, ${days} days, ${hours} hours, ${mins} mins, ${secs} secs`;
+                this.timePassed = `${years} years, ${months} months, ${days} days`;
             }
         }));
     });
