@@ -1,0 +1,57 @@
+@use "_variables.scss";
+@use "_header.scss";
+@use "_typography.scss";
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html {
+  color: var(--black);
+  font-family: var(--font-sans-serif);
+  font-size: clamp(0.5rem, calc(0.5rem + 1vw), 1.1rem);
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--grey-light);
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  max-width: var(--breakpoint-lg);
+  margin: auto;
+  padding: 0 var(--rem);
+}
+
+.card {
+  background-color: var(--white);
+  color: var(--card-color);
+  padding: clamp(0.5em, calc(0.8em + 1vw), 2.3em);
+  margin-bottom: var(--card-content-padding);
+  border-radius: clamp(0.2em, calc(0.1em + 0.3vw), 2em);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
+}
+
+.back-to-top {
+  text-decoration: none;
+  margin-block-start: calc(100vh + 400px);
+  position: sticky;
+  bottom: 1rem;
+  left: 100vw;
+  margin-inline-end: 1rem;
+  font-size: 2.5rem;
+}
+
+.skills dl dt {
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+.skills dl dd:not(:last-child) {
+  margin: 0 0 2rem 1rem;
+}

@@ -1,0 +1,43 @@
+script(defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js")
+script.
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('timeElapsed', (startTime) => ({
+            timePassed: '',
+            init() {
+                let startDate = new Date(startTime);
+                let now = new Date();
+
+                let years = now.getFullYear() - startDate.getFullYear();
+                let months = now.getMonth() - startDate.getMonth();
+                let days = now.getDate() - startDate.getDate();
+                let hours = now.getHours() - startDate.getHours();
+                let mins = now.getMinutes() - startDate.getMinutes();
+                let secs = now.getSeconds() - startDate.getSeconds();
+
+                // Adjust for negative values (e.g., if the current month is earlier than the start month)
+                if (secs < 0) {
+                    secs += 60;
+                    mins -= 1;
+                }
+                if (mins < 0) {
+                    mins += 60;
+                    hours -= 1;
+                }
+                if (hours < 0) {
+                    hours += 24;
+                    days -= 1;
+                }
+                if (days < 0) {
+                    let prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+                    days += prevMonth.getDate();
+                    months -= 1;
+                }
+                if (months < 0) {
+                    months += 12;
+                    years -= 1;
+                }
+
+                this.timePassed = `${years} years, ${months} months, ${days} days, ${hours} hours, ${mins} mins, ${secs} secs`;
+            }
+        }));
+    });
