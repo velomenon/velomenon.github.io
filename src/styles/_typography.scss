@@ -43,7 +43,7 @@ dt {
 }
 
 a {
-  color: #0070f0;
+  color: var(--blue);
   text-decoration: underline;
 }
 a:hover,
@@ -56,6 +56,14 @@ a:active {
 a[href^="http://"]:after,
   a[href^="https://"]:after
 {
-  content: url(http://upload.wikimedia.org/wikipedia/commons/6/64/Icon_External_Link.png);
-  margin: 0 0 0 5px;
+  content: "";
+  position: relative;
+  top: 0.15rem;
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin: 0 0.3rem;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%230070f0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7"/><path d="M10 14 21 3"/><path d="M21 14v7H3V3h7"/></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
