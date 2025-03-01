@@ -49,26 +49,33 @@ a {
 a:hover,
 a:focus,
 a:active {
-  color: var(--link-color);
+  color: var(--link-hover-color);
   text-decoration: none;
   &:after {
     color: var(--link-hover-color);
   }
 }
 
-a[href^="http://"]:after,
-  a[href^="https://"]:after
+a[href^="http://"],
+  a[href^="https://"]
 {
-  content: "↗";
-  position: relative;
-  top: 0.25rem;
-  display: inline-block;
-  width: 1rem;
-  height: 1rem;
-  margin: 0 0.4rem;
-  border: 1px solid var(--link-color);
-  vertical-align: top;
-  line-height: 1.2;
-  font-size: 0.8em;
-  text-align: center;
+  &:after {
+    content: "↗";
+    position: relative;
+    top: 0.25rem;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin: 0 0.4rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--link-color);
+    vertical-align: top;
+    line-height: 1.2;
+    font-size: 0.8em;
+    text-align: center;
+  }
+  &:hover::after {
+    border-color: var(--link-hover-color);
+  }
 }
