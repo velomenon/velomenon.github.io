@@ -1,0 +1,32 @@
+:root {
+  /* Colors */
+  --black: #000;
+  --blue: #0070f0;
+  --dark-blue: #013179;
+  --dark-grey: #131212;
+  --light-grey: #f2f2f2;
+  --orange: #ff5317;
+  --white: #fff;
+  --yellow: #ffee2e;
+}
+/* Default (Light Mode) */
+:root {
+  --page-background-color: var(--light-grey);
+  --text-color: var(--black);
+  --card-background-color: var(--white);
+  --link-color: var(--blue);
+  --link-hover-color: var(--orange);
+  --headers-color: var(--dark-blue);
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-background-color: var(--black);
+    --text-color: var(--white);
+    --card-background-color: var(--dark-grey);
+    --link-color: var(--orange);
+    --link-hover-color: var(--orange);
+    --headers-color: var(--yellow);
+  }
+}

@@ -16,7 +16,7 @@
     &:after {
       content: "/";
       margin-left: 1rem;
-      color: var(--blue);
+      color: var(--text-color);
     }
     &:last-child:after {
       content: "";
@@ -25,7 +25,7 @@
 
   &__link {
     text-decoration: none;
-    border-bottom: 1px dashed var(--blue);
+    border-bottom: 1px dashed var(--link-color);
     font-size: 1.1rem;
     &:hover {
       border-bottom-color: transparent;

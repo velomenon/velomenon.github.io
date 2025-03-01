@@ -1,3 +1,4 @@
+@use "_colors.scss";
 @use "_variables.scss";
 @use "_header.scss";
 @use "_typography.scss";
@@ -9,7 +10,7 @@
 }
 
 html {
-  color: var(--black);
+  color: var(--text-color);
   font-family: var(--font-sans-serif);
   font-size: clamp(0.5rem, calc(0.5rem + 1vw), 1.1rem);
   line-height: 1.5;
@@ -17,7 +18,7 @@ html {
 }
 
 body {
-  background-color: var(--grey-light);
+  background-color: var(--page-background-color);
   margin: 0;
   padding: 0;
 }
@@ -29,8 +30,8 @@ body {
 }
 
 .card {
-  background-color: var(--white);
-  color: var(--card-color);
+  background-color: var(--card-background-color);
+  color: var(--text-color);
   padding: clamp(0.5em, calc(0.8em + 1vw), 2.3em);
   margin-bottom: var(--card-content-padding);
   border-radius: clamp(0.2em, calc(0.1em + 0.3vw), 2em);
