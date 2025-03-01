@@ -51,19 +51,24 @@ a:focus,
 a:active {
   color: var(--orange);
   text-decoration: none;
+  &:after {
+    color: var(--blue);
+  }
 }
 
 a[href^="http://"]:after,
   a[href^="https://"]:after
 {
-  content: "";
+  content: "↗";
   position: relative;
-  top: 0.15rem;
+  top: 0.25rem;
   display: inline-block;
-  width: 0.8rem;
-  height: 0.8rem;
-  margin: 0 0.3rem;
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%230070f0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7"/><path d="M10 14 21 3"/><path d="M21 14v7H3V3h7"/></svg>');
-  background-size: contain;
-  background-repeat: no-repeat;
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0.4rem;
+  border: 1px solid var(--blue);
+  vertical-align: top;
+  line-height: 1.2;
+  font-size: 0.8em;
+  text-align: center;
 }
