@@ -1,17 +1,11 @@
+- var navItems = [{ href: "#about", label: "About" }, { href: "#experience", label: "Experience" }, { href: "#skills", label: "Skills" }, { href: "#contacts", label: "Contacts" }, { href: "#education", label: "Education" }, { href: "#languages", label: "Languages" }]
+
 header.nav-header.card
     nav.nav-header__nav
-        - var navItems = [
-            { href: "#about", label: "About" },
-            { href: "#experience", label: "Experience" },
-            { href: "#skills", label: "Skills" },
-            { href: "#contacts", label: "Contacts" },
-            { href: "#education", label: "Education" },
-            { href: "#languages", label: "Languages" }
-        ]
         ul.nav-header__list
             each item in navItems
                 li.nav-header__item
-                    a.nav-header__link(href=item.href) #{item.label}
+                    a.nav-header__link(href=item.href)= item.label
 
     button#switcher.switcher(x-data="themeSwitcher" @click="toggleTheme()")
         span(x-show="darkMode === true")
