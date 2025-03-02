@@ -1,5 +1,5 @@
+/* Colors */
 :root {
-  /* Colors */
   --black: #000;
   --blue: #0070f0;
   --dark-blue: #013179;
@@ -9,8 +9,9 @@
   --white: #fff;
   --yellow: #ffee2e;
 }
-/* Default (Light Mode) */
-:root {
+
+/* Override System Preferences with User Selection */
+[data-theme="light"] {
   --page-background-color: var(--light-grey);
   --text-color: var(--black);
   --card-background-color: var(--white);
@@ -19,14 +20,11 @@
   --headers-color: var(--dark-blue);
 }
 
-/* Dark Mode */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --page-background-color: var(--black);
-    --text-color: var(--white);
-    --card-background-color: var(--dark-grey);
-    --link-color: var(--yellow);
-    --link-hover-color: var(--blue);
-    --headers-color: var(--orange);
-  }
+[data-theme="dark"] {
+  --page-background-color: var(--black);
+  --text-color: var(--white);
+  --card-background-color: var(--dark-grey);
+  --link-color: var(--yellow);
+  --link-hover-color: var(--blue);
+  --headers-color: var(--orange);
 }

@@ -1,4 +1,8 @@
 .nav-header {
+  display: flex;
+  &__nav {
+    flex: 1;
+  }
   &__list {
     display: flex;
     flex-wrap: wrap;
@@ -29,6 +33,29 @@
     font-size: 1.1rem;
     &:hover {
       border-bottom-color: transparent;
+    }
+  }
+
+  .switcher {
+    position: relative;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border: 0;
+    color: inherit;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-size: 0;
+    background: none;
+
+    &__icon {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 70%;
+      height: 70%;
+      fill: currentColor;
+      transform: translate(-50%, -50%);
     }
   }
 }

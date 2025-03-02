@@ -24,9 +24,9 @@ body {
 }
 
 .main {
-  max-width: var(--breakpoint-lg);
+  max-width: var(--page-width);
   margin: auto;
-  padding: 0 var(--rem);
+  padding: 0 1rem;
 }
 
 .card {
