@@ -11,7 +11,7 @@
     "watch": "npm run build && npm-run-all --parallel watch:html watch:css",
     "serve": "browser-sync start --server 'dist' --files 'dist/**/*.html, dist/**/*.css' --ignore 'dist/**/*.map'",
     "watch-and-serve": "npm-run-all --parallel watch serve",
-    "release": "rm -rf cv && mkdir -p cv && npm run build && cp -r dist/* cv/ && echo $(date '+%Y-%m-%d %H:%M:%S') > cv/changelog.txt"
+    "release": "rm -rf cv && mkdir -p cv && npm run build && cp -r dist/* cv/ && cp -r src/favicons/* dist/ && echo $(date '+%Y-%m-%d %H:%M:%S') > cv/changelog.txt"
   },
   "author": "velomenon@gmail.com",
   "license": "ISC",
