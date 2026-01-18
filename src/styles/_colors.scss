@@ -18,6 +18,7 @@
   --link-color: var(--blue);
   --link-hover-color: var(--orange);
   --headers-color: var(--dark-blue);
+  --button-hover-text-color: var(--white);
 }
 
 [data-theme="dark"] {
@@ -27,4 +28,5 @@
   --link-color: var(--yellow);
   --link-hover-color: var(--blue);
   --headers-color: var(--orange);
+  --button-hover-text-color: var(--black);
 }
