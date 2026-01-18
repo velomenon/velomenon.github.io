@@ -5,13 +5,14 @@
   "scripts": {
     "build:html": "pug src/index.pug -o dist/",
     "build:css": "sass src/styles/styles.scss dist/styles.min.css --style=compressed --no-source-map",
+    "build:pdf": "node scripts/generate-pdf.js",
     "build": "npm run build:html && npm run build:css",
     "watch:html": "npm run build:html && chokidar 'src/**/*.pug' -c 'npm run build:html'",
     "watch:css": "npm run build:css && chokidar 'src/**/*.scss' -c 'npm run build:css'",
     "watch": "npm run build && npm-run-all --parallel watch:html watch:css",
     "serve": "browser-sync start --server 'dist' --files 'dist/**/*.html, dist/**/*.css' --ignore 'dist/**/*.map'",
     "watch-and-serve": "npm-run-all --parallel watch serve",
-    "release": "rm -rf cv && mkdir -p cv && npm run build && cp -r dist/* cv/ && cp -r src/favicons/* dist/ && echo $(date '+%Y-%m-%d %H:%M:%S') > cv/changelog.txt"
+    "release": "rm -rf cv && mkdir -p cv && npm run build && npm run build:pdf && cp -r dist/* cv/ && cp -r src/favicons/* dist/ && echo $(date '+%Y-%m-%d %H:%M:%S') > cv/changelog.txt"
   },
   "author": "velomenon@gmail.com",
   "license": "ISC",
@@ -21,6 +22,7 @@
     "chokidar-cli": "3.0.0",
     "npm-run-all": "4.1.5",
     "pug-cli": "1.0.0-alpha6",
+    "puppeteer": "24.35.0",
     "sass": "1.85.0"
   }
 }

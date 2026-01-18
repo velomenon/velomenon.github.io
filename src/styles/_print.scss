@@ -1,0 +1,95 @@
+// Print styles for PDF generation
+@media print {
+  // ===========================================
+  // Reset & Base
+  // ===========================================
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    background: white !important;
+    font-size: 10pt;
+    line-height: 1.4;
+  }
+
+  // ===========================================
+  // Hidden Elements
+  // ===========================================
+  .nav-header,
+  .switcher,
+  .back-to-top,
+  br {
+    display: none !important;
+  }
+
+  // ===========================================
+  // Layout
+  // ===========================================
+  .main {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .card {
+    display: block;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0;
+    background: white !important;
+    margin: 0 0 0.3em 0;
+    padding: 0;
+  }
+
+  // ===========================================
+  // Typography
+  // ===========================================
+  h1, h2, h3, h4, h5, h6 {
+    margin: 1em 0 0.5em;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0.2em 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  // ===========================================
+  // Lists
+  // ===========================================
+  ul, ol {
+    margin: 0.2em 0 0.2em 1.2em;
+  }
+
+  li {
+    margin: 0.1em 0;
+  }
+
+  dl {
+    margin: 0.3em 0;
+  }
+
+  dt {
+    margin-top: 0.3em;
+  }
+
+  dd {
+    margin: 0 0 0.2em 1em;
+  }
+
+  .card{
+    margin: 0 !important;
+    padding: 0 !important;
+    page-break-inside: auto !important;
+    page-break-before: auto !important;
+  }
+}

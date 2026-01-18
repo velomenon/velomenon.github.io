@@ -36,6 +36,22 @@
     }
   }
 
+  &__download {
+    margin-right: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--link-color);
+    border: 1px solid var(--link-color);
+    border-radius: 0.25rem;
+    flex-shrink: 0;
+    align-self: flex-start;
+    &:hover {
+      background-color: var(--link-color);
+      color: white;
+    }
+  }
+
   .switcher {
     position: relative;
     display: block;

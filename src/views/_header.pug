@@ -7,6 +7,7 @@ header.nav-header.card
                 li.nav-header__item
                     a.nav-header__link(href=item.href)= item.label
 
+    a.nav-header__download(href="cv_cojuhari_dumitru.pdf" download) PDF ↓
     button#switcher.switcher(x-data="themeSwitcher" @click="toggleTheme()")
         span(x-show="darkMode === true")
             | Light theme
