@@ -1,72 +1,72 @@
 doctype html
 html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        title Dumitru Cojuhari - Senior Front-End Engineer | React, Next.js, Angular, Node.js
-        meta(name='description' content='Dumitru Cojuhari - Senior Front-End Engineer with 14+ years of experience in React, Next.js, Angular, TypeScript, and Node.js. Based in Berlin, Germany.')
-        meta(name='keywords' content='Senior Front-End Developer, Front-End Engineer, React Developer, Next.js Developer, Angular Developer, TypeScript, JavaScript, Node.js, Full-Stack Developer, Berlin, Germany, Web Development, Software Engineer')
-        meta(name='author' content='Dumitru Cojuhari')
-        meta(name='robots' content='index, follow')
-        link(rel='canonical' href='https://velomenon.github.io/cv/')
-        link(rel='shortcut icon' href='./favicon.ico')
-        link(rel="stylesheet" href="./styles.min.css")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Dumitru Cojuhari - Senior Front-End Engineer | React, Next.js, Angular, Node.js
+    meta(name='description' content='Dumitru Cojuhari - Senior Front-End Engineer with 14+ years of experience in React, Next.js, Angular, TypeScript, and Node.js. Based in Berlin, Germany.')
+    meta(name='keywords' content='Senior Front-End Developer, Front-End Engineer, React Developer, Next.js Developer, Angular Developer, TypeScript, JavaScript, Node.js, Full-Stack Developer, Berlin, Germany, Web Development, Software Engineer')
+    meta(name='author' content='Dumitru Cojuhari')
+    meta(name='robots' content='index, follow')
+    link(rel='canonical' href='https://velomenon.github.io/cv/')
+    link(rel='shortcut icon' href='./favicon.ico')
+    link(rel="stylesheet" href="./styles.min.css")
 
-        //- Open Graph Meta Tags
-        meta(property='og:title' content='Dumitru Cojuhari - Senior Front-End Engineer')
-        meta(property='og:description' content='Senior Front-End Engineer with 14+ years of experience in React, Next.js, Angular, TypeScript, and Node.js.')
-        meta(property='og:type' content='profile')
-        meta(property='og:url' content='https://velomenon.github.io/cv/')
+    //- Open Graph Meta Tags
+    meta(property='og:title' content='Dumitru Cojuhari - Senior Front-End Engineer')
+    meta(property='og:description' content='Senior Front-End Engineer with 14+ years of experience in React, Next.js, Angular, TypeScript, and Node.js.')
+    meta(property='og:type' content='profile')
+    meta(property='og:url' content='https://velomenon.github.io/cv/')
 
-        //- Schema.org Structured Data for ATS
-        script(type='application/ld+json').
-            {
-                "@context": "https://schema.org",
-                "@type": "Person",
-                "name": "Dumitru Cojuhari",
-                "jobTitle": "Senior Front-End Engineer",
-                "description": "Senior Front-End Engineer with 14+ years of experience building scalable web applications using React, Next.js, Angular, TypeScript, and Node.js.",
-                "url": "https://velomenon.github.io/cv/",
-                "email": "velomenon@gmail.com",
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Berlin",
-                    "addressCountry": "Germany"
-                },
-                "sameAs": [
-                    "https://github.com/velomenon",
-                    "https://www.linkedin.com/in/dumitru-cojuhari/"
-                ],
-                "knowsAbout": [
-                    "React", "Next.js", "Angular", "TypeScript", "JavaScript", "Node.js", 
-                    "Front-End Development", "Full-Stack Development", "Web Development",
-                    "Playwright", "Cypress", "Jest", "Test Automation",
-                    "GraphQL", "REST API", "Agile", "Scrum"
-                ],
-                "hasCredential": [
-                    {
-                        "@type": "EducationalOccupationalCredential",
-                        "name": "Master's Degree in Information Technologies in Modelling"
-                    },
-                    {
-                        "@type": "EducationalOccupationalCredential", 
-                        "name": "Master's Degree in Economy and Informatics"
-                    },
-                    {
-                        "@type": "EducationalOccupationalCredential",
-                        "name": "Agile Scrum Master Certification"
-                    }
-                ]
-            }
+    //- Schema.org Structured Data for ATS
+    script(type='application/ld+json').
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Dumitru Cojuhari",
+        "jobTitle": "Senior Front-End Engineer",
+        "description": "Senior Front-End Engineer with 14+ years of experience building scalable web applications using React, Next.js, Angular, TypeScript, and Node.js.",
+        "url": "https://velomenon.github.io/cv/",
+        "email": "velomenon@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Berlin",
+          "addressCountry": "Germany"
+        },
+        "sameAs": [
+          "https://github.com/velomenon",
+          "https://www.linkedin.com/in/dumitru-cojuhari/"
+        ],
+        "knowsAbout": [
+          "React", "Next.js", "Angular", "TypeScript", "JavaScript", "Node.js", 
+          "Front-End Development", "Full-Stack Development", "Web Development",
+          "Playwright", "Cypress", "Jest", "Test Automation",
+          "GraphQL", "REST API", "Agile", "Scrum"
+        ],
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Master's Degree in Information Technologies in Modelling"
+          },
+          {
+            "@type": "EducationalOccupationalCredential", 
+            "name": "Master's Degree in Economy and Informatics"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Agile Scrum Master Certification"
+          }
+        ]
+      }
 
 
-    body
-        main.main
-            include views/_header.pug
-            include views/_about.pug
-            include views/_skills.pug
-            include views/_experience.pug
-            include views/_education.pug
-            include views/_contacts.pug
-            include views/_languages.pug
-        include views/_footer.pug
+  body
+    main.main
+      include views/_header.pug
+      include views/_about.pug
+      include views/_skills.pug
+      include views/_experience.pug
+      include views/_education.pug
+      include views/_contacts.pug
+      include views/_languages.pug
+    include views/_footer.pug
